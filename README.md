@@ -2,6 +2,8 @@
 
 ## Abstract
 
+[Paper on Arxiv](https://arxiv.org/abs/2004.07003)
+
 In recent times, CNNs have made significant contribu- tions to applications in image generation, super-resolution and style transfer. In this paper, we build upon the work of Howard and Gugger [11], He et al. [10] and Misra, D. [16] and propose a CNN architecture that accurately reconstructs hyperspectral images from their RGB counterparts. We also propose a much shallower version of our best model with a 10% relative memory footprint and 3x faster infer- ence thus enabling real-time video applications while still experiencing only about a 0.5% decrease in performance. 
 
 Our work is significantly inspired by Antic, J.’s work[2] in reconstructing RGB bands from grayscale images. We use a modified version of perceptual loss [12] in our network. This kind of loss function has proved useful in style-transfer [12] and super-resolution [13] applications. It makes networks focus on perceptual details in an image. These details are not easily captured by standard evaluation metrics like RMSE, PSNR or MRAE but are readily visible to humans. We make use of sub-pixel convolutions [23] for upsampling in our decoder. It is an alternative to deconvolution operation for learned upsampling and is extensively used in super-resolution applications. It performs the convolution in a low resolution space and upsamples the result, instead of upsampling first. This approach is much more efficient while being mathematically equivalent to deconvolution.
